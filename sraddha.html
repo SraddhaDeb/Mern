@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Day 1 Assignment</title>
+</head>
+<body>
+    <script>
+        const validColors = ["red", "blue", "green", "yellow", "orange", "purple", "pink", "brown", "gray", "black", "white"]; // Add more colors if needed
+
+        const userColor = prompt("Enter a background color (e.g., 'red', 'blue', '#ff0000'):");
+        if (validColors.includes(userColor.toLowerCase()) || /^#[0-9A-F]{6}$/i.test(userColor)) { 
+            document.body.style.backgroundColor = userColor;
+        } else {
+            alert("Invalid color input. Please enter a valid color name or hex code.");
+        }
+
+        const userName = prompt("Please enter your name:");
+        document.write(`<h1>Hello, ${userName || "Guest"}!</h1>`); 
+
+        const userAgeInput = prompt("Please enter your age:");
+        const userAge = parseInt(userAgeInput, 10); 
+
+        if (!isNaN(userAge)) {
+            const ageStatus = (userAge >= 18) ? "You are an adult." : "You are not yet an adult.";
+            alert(ageStatus);
+        } else {
+            alert("Invalid age input.");
+        }
+    </script>
+</body>
+</html>
